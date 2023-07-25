@@ -13,18 +13,20 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
-
-		for (int i = 0; i < n; i++) {
+			int i = 0;
 			for (int j = i + 1; j < n; j++) {
 				if (((a[i] % 2 == 0 && a[j] % 2 == 0) || (a[i] % 2 != 0 && a[j] % 2 != 0)) && (a[j] < a[i])) {
 					a[i] = a[i] + a[j];
 					a[j] = a[i] - a[j];
 					a[i] = a[i] - a[j];
-					i--;
-					break;
+					j = i;
+				}
+
+				if (j == n - 1) {
+					i++;
+					j = i;
 				}
 			}
-		}
 
 		int flag = 1;
 		for (int i = 0; i < n - 1; i++) {
