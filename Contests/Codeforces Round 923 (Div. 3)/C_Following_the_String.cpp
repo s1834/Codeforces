@@ -21,8 +21,9 @@ int main() {
 				mp[a[i]].push_back('a');
 				s += 'a';
 			} else {
-				mp[a[i]].push_back(mp[a[i]][mp[a[i]].size() - 1] + 1);
-				s += mp[a[i]][mp[a[i]].size() - 1] + 1;
+				char last = mp[a[i]].size() - 1;
+				mp[a[i]].push_back(mp[a[i]][last] + 1);
+				s += mp[a[i]][last + 1];
 			}
 		}
 		cout << s << endl;
