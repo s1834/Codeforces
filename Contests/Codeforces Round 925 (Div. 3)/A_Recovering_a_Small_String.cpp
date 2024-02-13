@@ -11,7 +11,7 @@ int main() {
  
 		string ans = "";
 		int count = 3;
-		while (n >= 26) {
+		while (n >= 28) {
 			ans += 'z';
 			n -= 26;
 			count--;
