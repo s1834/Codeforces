@@ -5,13 +5,13 @@ int main() {
 	int t;
 	cin >> t;
 
+	string checkboard = "";
 	while (t--) {
 		int n;
 		cin >> n;
 
 		int countI = 0, countJ = 0;
 		char symbol = '#';
-		string checkboard = "";
 	    if(n % 2) {
 	        for (int i = 0; i < 2 * n; i++) {
 			countJ = 0;
@@ -42,6 +42,9 @@ int main() {
 					countJ = 0;
 				}
 			}
+			if(i > 2 * n - 1) {
+			    continue;
+			}
 			checkboard += '\n';
 			if(countI == 2) {
 			    symbol = symbol == '#' ? '.' : '#';
@@ -49,10 +52,8 @@ int main() {
 			}
 		}
 	    }
-		
-
-		cout << checkboard << endl;
 	}
+		cout << checkboard << endl;
 
 	return 0;
 }
