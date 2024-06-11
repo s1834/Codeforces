@@ -27,20 +27,21 @@ int main() {
 		}
 
 		long long int count = 1;
+		int newMin;
 		while(h > 0) {
+			newMin = INT_MAX;
 			for (int i = 0; i < n; i++) {
 				temp[i] -= min;
 				if(temp[i] == 0) {
 					h -= a[i];
 					temp[i] = c[i];
 				}
-			}
-			count += min;
-			for (int i = 0; i < n; i++) {
-				if(temp[i] < min) {
-					min = temp[i];
+				if(temp[i] < newMin) {
+					newMin = temp[i];
 				}
 			}
+			count += min;
+			min = newMin;
 		}
 
 		cout << count << endl;
