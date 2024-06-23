@@ -22,18 +22,18 @@ int main() {
 		sort(ind.begin(), ind.end());
 		sort(c.begin(), c.end());
 
-		vector<char> character;
+		unordered_map<int, char> character;
+		int index = 0;
 		for (int i = 0; i < m; i++) {
-			character.push_back(c[i]);
+			if(character.find(ind[i]) == character.end()) {
+				character[ind[i]] = c[index];
+				index++;
+			}
 		}
 
 
-		int index = 0;
-		for (int i = 0; i < m; i++) {
-			if(ind[i] - 1 >= index) {
-				s[ind[i] - 1] = character[index];
-				index++;
-			}	
+		for (auto x : character) {
+			s[x.first - 1] = x.second;
 		}
 
 		cout << s << endl;
