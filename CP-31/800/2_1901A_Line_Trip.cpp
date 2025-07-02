@@ -14,7 +14,7 @@ int main() {
             cin >> arr[i];
             if(i > 0 && arr[i] - arr[i - 1] > mx) mx = arr[i] - arr[i - 1];
         }
-        if(n == 1) cout << arr[0] << endl;
+        if(n == 1) cout << max(arr[0], 2 * (x - arr[0])) << endl;
         else cout << max(mx, 2 * (x - arr[n - 1])) << endl;
     }
 
