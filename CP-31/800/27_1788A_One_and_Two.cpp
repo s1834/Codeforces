@@ -36,5 +36,5 @@ int main() {
 To find such a k, we just need to check if we have even number of 2's in the array so we can divide them equally.
 if it is one, we can directly get the answer when we check for temp == two - temp.
 
-also always try to make it simplar like here it is addition, whereas in your previous code it was multiplication, so it caused runtime error of signed integer overflow.
+Also always try to make it simplar like here it is addition, whereas in your previous code it was multiplication, so it caused runtime error of signed integer overflow.
 */
