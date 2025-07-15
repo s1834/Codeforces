@@ -24,5 +24,8 @@ int main() {
 }
 
 /*
-
+1) first check the difference between the first and last element
+2) then check the difference between the first element and all other elements
+3) then check the difference between the last element and all other elements
+4) finally check the difference between all adjacent elements
 */
